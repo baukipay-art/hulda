@@ -235,7 +235,8 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--char);fon
 .cert-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--sh);border:1px solid rgba(26,31,60,.05);transition:transform .3s,box-shadow .3s;position:relative}
 .cert-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}
 .cert-prev{aspect-ratio:16/10;background:linear-gradient(145deg,#edeae3,#e0dcd4);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;user-select:none;-webkit-user-select:none;}
-.cert-prev img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.cert-prev img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;} /* Prevents dragging */
+.cert-shield{position:absolute;inset:0;z-index:10;background:transparent;cursor:default;} /* Blocks clicking/saving */
 .cert-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:18px;text-align:center;}
 .cert-ph .ci{font-size:2.5rem}
 .cert-ph .cl{font-family:'Space Mono',monospace;font-size:.63rem;color:rgba(26,31,60,.35);background:rgba(26,31,60,.05);border:1px dashed rgba(26,31,60,.12);padding:4px 10px;border-radius:4px}
@@ -243,7 +244,7 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--char);fon
 .cert-info h4{font-weight:700;font-size:.95rem;color:var(--navy);margin-bottom:4px}
 .cert-iss{font-size:.78rem;color:var(--sage);margin-bottom:10px}
 .cert-desc{font-family:'Merriweather',serif;font-size:.78rem;font-weight:300;color:var(--char);line-height:1.8;padding-top:10px;border-top:1px solid rgba(26,31,60,.07)}
-.cert-yr{position:absolute;top:10px;right:10px;z-index:4;background:var(--gold);color:var(--navy);font-size:.64rem;font-weight:700;padding:3px 10px;border-radius:50px}
+.cert-yr{position:absolute;top:10px;right:10px;z-index:11;background:var(--gold);color:var(--navy);font-size:.64rem;font-weight:700;padding:3px 10px;border-radius:50px}
 
 /* ════════════════════
    PORTFOLIO

@@ -95,10 +95,17 @@ function doSearch(q){
 }
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeSrch(); if((e.ctrlKey || e.metaKey) && e.key === 'k'){ e.preventDefault(); openSrch(); } });
 
-/* ── PRELOADER ── */
+/* ── PRELOADER & SETUP ── */
 window.addEventListener('DOMContentLoaded', () => {
   go('home');
   setTimeout(() => { document.getElementById('preloader').classList.add('gone'); runReveals(); }, 2350);
+
+  // Anti-Theft Script for Certificates
+  document.querySelectorAll('.cert-prev').forEach(el => {
+    el.addEventListener('contextmenu', e => e.preventDefault());
+    el.addEventListener('dragstart', e => e.preventDefault());
+    el.addEventListener('selectstart', e => e.preventDefault());
+  });
 });
 
 /* ── PROGRESS BAR & SCROLL STATES ── */
